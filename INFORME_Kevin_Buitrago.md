@@ -6,13 +6,14 @@
 ## Capturas
 
 ### Pipeline en verde
-![Pipeline en verde](capturas/pipeline-verde.png)
+![Pipeline en verde](capturas/PipelineVerde.png)
 
 ### Pipeline en rojo (Paso 7.5)
-![Pipeline en rojo](capturas/pipeline-rojo.png)
+![Pipeline en rojo](capturas/PipelineRojo.png)
 
 ### Reporte de cobertura (JaCoCo)
-![Reporte JaCoCo](capturas/jacoco.png)
+![Reporte JaCoCo](capturas/jacoco1.png)
+![Reporte JaCoCo detalle](capturas/jacoco2.png)
 
 ## Preguntas
 
