@@ -39,7 +39,10 @@ public class CalculadoraPronosticos {
         return sumaErrores / real.size();
     }
 
+    /** Error cuadrático medio (MSE): promedio de las diferencias elevadas al cuadrado. */
     public double mse(List<Double> real, List<Double> pronostico) {
+        validarSeries(real, pronostico);
+
         double suma = 0;
         for (int i = 0; i < real.size(); i++) {
             double diferencia = real.get(i) - pronostico.get(i);
