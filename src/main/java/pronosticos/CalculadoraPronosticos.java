@@ -79,9 +79,14 @@ public class CalculadoraPronosticos {
         return errorPorcentual >= umbral;
     }
     public double suavizacionExponencial(List<Double> serie, double alfa) {
+        if (alfa < 0 || alfa > 1) {
+            throw new IllegalArgumentException("Alfa debe estar entre 0 y 1");
+        }
+
         double pronostico = serie.get(0);
         for (int i = 1; i < serie.size(); i++) {
-            pronostico = pronostico + alfa * (serie.get(i) - pronostico);
+            double demanda = serie.get(i);
+            pronostico = pronostico + alfa * (demanda - pronostico);
         }
         return pronostico;
     }
