@@ -30,6 +30,14 @@ class AlertasTest {
     void noGeneraAlertaCuandoElErrorEstaPorDebajo() {
         assertFalse(calculadora.debeGenerarAlerta(7, 10));
     }
+    @Test
+    @DisplayName("Lanza error si el umbral es negativo")
+    void lanzaErrorSiElUmbralEsNegativo() {
+        CalculadoraPronosticos calculadora = new CalculadoraPronosticos();
+
+        assertThrows(IllegalArgumentException.class,
+                () -> calculadora.debeGenerarAlerta(12, -5));
+    }
 
     @Test
     @DisplayName("Lanza error si el umbral está fuera de 0 a 100")

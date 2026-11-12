@@ -90,6 +90,7 @@ public class CalculadoraPronosticos {
         }
         return pronostico;
     }
+
     private void validarSeries(List<Double> real, List<Double> pronostico) {
         if (real.size() != pronostico.size()) {
             throw new IllegalArgumentException("Las series deben tener el mismo número de periodos");
