@@ -76,7 +76,7 @@ public class CalculadoraPronosticos {
         if (umbral < 0 || umbral > 100) {
             throw new IllegalArgumentException("El umbral debe estar entre 0 y 100");
         }
-        return errorPorcentual >= umbral;
+        return errorPorcentual > umbral;
     }
     public double suavizacionExponencial(List<Double> serie, double alfa) {
         if (alfa < 0 || alfa > 1) {
