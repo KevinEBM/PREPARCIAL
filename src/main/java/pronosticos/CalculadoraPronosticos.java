@@ -39,6 +39,15 @@ public class CalculadoraPronosticos {
         return sumaErrores / real.size();
     }
 
+    public double mse(List<Double> real, List<Double> pronostico) {
+        double suma = 0;
+        for (int i = 0; i < real.size(); i++) {
+            double diferencia = real.get(i) - pronostico.get(i);
+            suma += diferencia * diferencia;
+        }
+        return suma / real.size();
+    }
+
     /**
      * Error porcentual absoluto medio (MAPE), expresado en porcentaje.
      *
